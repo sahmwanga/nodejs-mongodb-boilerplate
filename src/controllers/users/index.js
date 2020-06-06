@@ -1,6 +1,6 @@
 // const userRouter = require('express').Router();
 
-// const { getUser } = require('./get.users');
+// const { getUserController } = require('./get.users');
 
 // // import user services and other dependencies
 
@@ -12,10 +12,14 @@
 //   return userRouter;
 // };
 
-const { getUser } = require('./get.users');
-const { createUser } = require('./create.users');
-const { removeUser } = require('./remove.user');
+const { getUserController } = require('./get.users');
+const { createUserController } = require('./create.users');
+const { removeUserController } = require('./remove.user');
+const { listUsersController } = require('./list.users');
 
-const { userService } = require('../../services');
-
-module.exports = { getUser, createUser, removeUser };
+module.exports = {
+  getUserController,
+  createUserController,
+  removeUserController,
+  listUsersController,
+};

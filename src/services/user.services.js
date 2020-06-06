@@ -1,8 +1,7 @@
-module.exports = ({ Users }) => async (payload) => {
-  console.log(payload);
-  const getUserService = () => Users.find({});
-  const listUsersService = () => Users.find({});
-  const createUserService = () => Users.find({});
+module.exports = ({ Users }) => {
+  const getUser = () => Users.find({});
+  const listUsers = (payload) => Users.find({});
+  const createUser = (payload) => Users.create(payload);
 
-  return { getUserService, listUsersService, createUserService };
+  return { getUser, listUsers, createUser };
 };

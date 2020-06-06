@@ -3,11 +3,11 @@ const { Schema } = require('mongoose');
 // const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-  firstName: {
+  first_name: {
     type: String,
     require: [true],
   },
-  lastName: {
+  last_name: {
     type: String,
     require: [true],
   },
